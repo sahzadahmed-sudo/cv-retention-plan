@@ -1,18 +1,71 @@
-# College Vidya Retention Plan
-
-## Overview
-The College Vidya Retention Plan is designed to improve student success through various innovative features and tools. This application includes:
-
-- **Retention Flowchart**: An interactive flowchart that guides students through the retention process, with nodes that provide detailed information when clicked.
-- **AI-Powered Call Script Generator**: This feature integrates with Claude to generate call scripts tailored for various student scenarios, enhancing communication effectiveness.
-- **University Payout Table**: A comprehensive payout table that allows users to import/export data using Excel, ensuring smooth data management.
-- **Subsidy Policy Overview**: A detailed overview of the subsidy policies available, helping students understand financial support options.
-- **Professional Styling**: The application features modern professional styling with color-coded nodes for easy navigation and understanding.
-- **Local Storage Persistence**: University data is stored locally, ensuring quick access and reliability across sessions.
-- **Modal Dialogs**: Interactive modal dialogs enhance user experience by providing context-sensitive information and options for user interactions.
-- **JavaScript Functionality**: All necessary JavaScript functionality is included to ensure a smooth and interactive experience for all users.
-
-## Conclusion
-The College Vidya Retention Plan application aims to streamline communication and support for students, making the retention process more efficient and effective. 
-
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Vidya Retention Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>College Vidya Retention Plan</h1>
+    </header>
+    <main>
+        <section id="retention-flowchart">
+            <h2>Retention Flowchart</h2>
+            <div class="flowchart">
+                <!-- Interactive nodes for retention flowchart -->
+                <!-- Example: -->
+                <div class="node" id="node1">Node 1</div>
+                <div class="node" id="node2">Node 2</div>
+                <!-- More nodes... -->
+            </div>
+        </section>
+        <section id="ai-script-generator">
+            <h2>AI Script Generator</h2>
+            <textarea id="script-input" placeholder="Enter your script here..."></textarea>
+            <button id="generate-script">Generate Script</button>
+        </section>
+        <section id="university-payout-table">
+            <h2>University Payout Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>University</th>
+                        <th>Payout</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>University 1</td><td>$1000</td></tr>
+                    <tr><td>University 2</td><td>$2000</td></tr>
+                    <tr><td>University 3</td><td>$1500</td></tr>
+                    <tr><td>University 4</td><td>$1200</td></tr>
+                    <tr><td>University 5</td><td>$1800</td></tr>
+                    <tr><td>University 6</td><td>$1700</td></tr>
+                    <tr><td>University 7</td><td>$1600</td></tr>
+                    <tr><td>University 8</td><td>$1900</td></tr>
+                    <tr><td>University 9</td><td>$2200</td></tr>
+                    <tr><td>University 10</td><td>$2100</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="subsidy-policy-overview">
+            <h2>Subsidy Policy Overview</h2>
+            <p>This section provides an overview of the subsidy policies in place.</p>
+        </section>
+        <section id="import-export-functionality">
+            <h2>Excel Import/Export Functionality</h2>
+            <button id="import-data">Import Data</button>
+            <button id="export-data">Export Data</button>
+        </section>
+        <section id="modal-dialogs">
+            <h2>Modal Dialogs</h2>
+            <button id="open-modal">Open Modal</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 College Vidya</p>
+    </footer>
+</body>
+</html>
