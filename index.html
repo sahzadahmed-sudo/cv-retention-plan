@@ -1,41 +1,99 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Vidya Retention Plan</title>
     <style>
-        /* CSS styles embedded here */
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #333; }
-        .flowchart { /* styling for flowchart */ }
-        /* Add more styles as necessary */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(to right, #f5f7fa, #c3cfe2); }
+        header { background: #4CAF50; color: white; padding: 10px 20px; text-align: center; }
+        nav { display: flex; justify-content: space-around; background: #333; }
+        nav a { color: white; padding: 14px 20px; text-decoration: none; text-align: center; }
+        nav a:hover { background: #ddd; color: black; }
+        .container { padding: 20px; }
+        .flowchart { width: 100%; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table, th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
+        .modal-content { background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; }
+        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+        .close:hover, .close:focus { color: red; cursor: pointer; }
     </style>
-    <script>
-        // JavaScript functionality embedded here
-        function generateScript() {
-            // AI Script Generator Functionality
-        }
-        // Other scripts...
-    </script>
 </head>
 <body>
-    <h1>College Vidya Retention Plan</h1>
-    <div class='flowchart'>
-        <!-- Flowchart visual representation -->
+    <header>
+        <h1>College Vidya Retention Plan</h1>
+    </header>
+    <nav>
+        <a href="#flowchart">Retention Flowchart</a>
+        <a href="#universities">Payout & Subsidy Table</a>
+        <a href="#policy">Subsidy Policy</a>
+        <a href="#ai-script">AI Call Script Generator</a>
+    </nav>
+    <div class="container">
+        <section id="flowchart">
+            <h2>Retention Flowchart</h2>
+            <img src="flowchart.png" alt="Retention Flowchart" class="flowchart">
+            <p>Interactive nodes will be implemented here.</p>
+        </section>
+        <section id="universities">
+            <h2>Payout & Subsidy Table</h2>
+            <table>
+                <tr><th>University</th><th>Payout</th><th>Subsidy</th></tr>
+                <tr><td>University A</td><td>$500</td><td>50%</td></tr>
+                <tr><td>University B</td><td>$600</td><td>45%</td></tr>
+                <tr><td>University C</td><td>$550</td><td>50%</td></tr>
+                <tr><td>University D</td><td>$700</td><td>60%</td></tr>
+                <tr><td>University E</td><td>$650</td><td>55%</td></tr>
+            </table>
+            <p>CRUD operations will be implemented here.</p>
+        </section>
+        <section id="policy">
+            <h2>Comprehensive Subsidy Policy Overview</h2>
+            <p>Details about various tiers and rules are provided here.</p>
+        </section>
+        <section id="ai-script">
+            <h2>AI Call Script Generator</h2>
+            <button onclick="openModal()">Generate Script</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Select a Scenario</h2>
+                    <form id="scriptForm">
+                        <select id="scenario">
+                            <option value="scenario1">Scenario 1</option>
+                            <option value="scenario2">Scenario 2</option>
+                            <option value="scenario3">Scenario 3</option>
+                            <option value="scenario4">Scenario 4</option>
+                            <option value="scenario5">Scenario 5</option>
+                        </select>
+                        <button type="submit">Generate</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <button onclick="importExcel()">Import Excel</button>
+        <button onclick="exportExcel()">Export Excel</button>
     </div>
-    <div>
-        <h2>University Payout Table</h2>
-        <!-- University payout table content -->
-    </div>
-    <div>
-        <h2>Subsidy Policy</h2>
-        <!-- Subsidy policy content -->
-    </div>
-    <div>
-        <h2>Import/Export</h2>
-        <!-- Excel import/export functionality -->
-    </div>
-    <div>
-        <h2>Modal Dialogs</h2>
-        <!-- Modal dialogs implementation -->
-    </div>
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+        document.getElementById('scriptForm').onsubmit = function(e) {
+            e.preventDefault();
+            const scenario = document.getElementById('scenario').value;
+            alert('Script generated for ' + scenario);
+            closeModal();
+        };
+        function importExcel() {
+            alert('Excel import function to be implemented.');
+        }
+        function exportExcel() {
+            alert('Excel export function to be implemented.');
+        }
+    </script>
 </body>
 </html>
